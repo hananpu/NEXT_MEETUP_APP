@@ -38,7 +38,7 @@ export const getStaticProps = async () => {
         id: meetup._id.toString(),
       })),
     },
-    //revalidate: 5 // Eğer sonradan yenilenmesi gereken datalar varsa her x saniyede bir işlem yapar.
+    revalidate: 1 // Eğer sonradan yenilenmesi gereken datalar varsa her x saniyede bir işlem yapar.
   };
 };
 
