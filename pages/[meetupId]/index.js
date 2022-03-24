@@ -35,8 +35,10 @@ export const getStaticPaths = async () => {
   client.close();
 
   return {
-    // listede olayan paramslar için de çalışsın isteniyorsa true ayarlanır. Aksi halde 404 hatası döner.
-    fallback: false,
+    // listede olmayan paramslar için de çalışsın isteniyorsa true veya "blocking" ayarlanır. Aksi halde 404 hatası döner.
+    // true öncesinde boş sayfa gösterir sonra dinamik oluşturulan sayfayı çizer.
+    // 'blocking' sayfayı dinamik data ile çizdikten sonra gösterir.
+    fallback: "blocking",
     paths: meetups.map((meetup) => ({
       params: {
         meetupId: meetup._id.toString(),
