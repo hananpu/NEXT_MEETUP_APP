@@ -9,7 +9,7 @@ const HompePage = (props) => {
         <title>React Meetups</title>
         <meta name="description" content="React meetups example just for fun" />
       </Head>
-      <MeetupList meetups={props.meetups} />;
+      <MeetupList meetups={props.meetups} />
     </>
   );
 };
