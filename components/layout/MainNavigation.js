@@ -9,10 +9,10 @@ function MainNavigation() {
       <div className={classes.logo}>React Meetups</div>
       <nav>
         <ul>
-          <li>
+          <li className="manin_nav_li">
             <Link href='/'>All Meetups</Link>
           </li>
-          <li>
+          <li className="manin_nav_li">
             <Link href='/new-meetup'>Add New Meetup</Link>
           </li>
         </ul>
